@@ -11,3 +11,16 @@ More to come as I add it.
 
 ### Why?
 Why the heck not? It's kinda a helper for me.
+
+## How to use?
+Probably the most important is the `EverythingAPI`s: `BukkitEverythingAPI` and `BungeeEverythingAPI`.
+
+Wherever you need it just create a new instance of it and pass your plugin to the constructor:
+
+```java
+// Bukkit
+BukkitEverythinAPI bukkit = new BukkitEverythingAPI(plugin);
+
+// Bungee
+BungeeEverythinAPI bungee = new BungeeEverythingAPI(plugin);
+```

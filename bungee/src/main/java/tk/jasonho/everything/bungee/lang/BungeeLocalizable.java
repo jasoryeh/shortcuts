@@ -1,20 +1,20 @@
-package tk.jasonho.everything.bukkit.lang;
+package tk.jasonho.everything.bungee.lang;
 
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
-import tk.jasonho.everything.bukkit.BukkitEverythingAPI;
+import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
+import tk.jasonho.everything.bungee.BungeeEverythingAPI;
 import tk.jasonho.shortcuts.everything.lang.DefaultLocalizable;
 
 import java.util.Locale;
 
-public class BukkitLocalizable extends DefaultLocalizable {
-    public BukkitLocalizable(BukkitEverythingAPI api, String path) {
+public class BungeeLocalizable extends DefaultLocalizable {
+    public BungeeLocalizable(BungeeEverythingAPI api, String path) {
         super(api, path);
     }
 
-    public String resolve(Player player) {
+    public String resolve(ProxiedPlayer player) {
         try {
-            Locale locale = this.resolveLocale(player.spigot().getLocale());
+            Locale locale = player.getLocale();
             if (locale != null) {
                 return this.resolve(locale);
             }

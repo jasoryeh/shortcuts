@@ -1,6 +1,7 @@
 package tk.jasonho.everything.bungee;
 
 import lombok.Getter;
+import lombok.Setter;
 import net.md_5.bungee.api.plugin.Plugin;
 import tk.jasonho.everything.bungee.log.BungeeLoggerManager;
 import tk.jasonho.shortcuts.everything.EverythingAPI;
@@ -43,9 +44,12 @@ public class BungeeEverythingAPI extends EverythingAPI {
         return YamlConfiguration.load(new File(this.plugin.getDataFolder() + File.separator + "config.yml"));
     }
 
+    @Setter
+    private YamlConfigurationObject langConfig;
+
     @Override
     public YamlConfigurationObject getLangConfig() {
-        return null;
+        return this.langConfig;
     }
 
     @Override

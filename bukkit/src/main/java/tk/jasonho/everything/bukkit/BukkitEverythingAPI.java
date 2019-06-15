@@ -49,7 +49,6 @@ public class BukkitEverythingAPI extends EverythingAPI {
         return YamlConfiguration.load(new File(this.plugin.getDataFolder() + File.separator + "config.yml"));
     }
 
-    @Getter
     @Setter
     /**
      * Must be manually set.

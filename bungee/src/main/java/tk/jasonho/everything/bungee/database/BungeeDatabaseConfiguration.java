@@ -1,10 +1,10 @@
-package tk.jasonho.everything.bukkit.database;
+package tk.jasonho.everything.bungee.database;
 
-import org.bukkit.configuration.file.FileConfiguration;
+import net.md_5.bungee.config.Configuration;
 import tk.jasonho.shortcuts.everything.database.DatabaseConfiguration;
 
-public class BukkitDatabaseConfiguration extends DatabaseConfiguration {
-    public BukkitDatabaseConfiguration(FileConfiguration config) {
+public class BungeeDatabaseConfiguration extends DatabaseConfiguration {
+    public BungeeDatabaseConfiguration(Configuration config) {
         super(
                 config.getString("connections.database.host"),
                 config.getString("connections.database.database"),
