@@ -44,6 +44,10 @@ public abstract class Manager implements Listener {
         return enabled;
     }
 
+    public void enableListeners() {
+        this.api.getPlugin().getProxy().getPluginManager().registerListener(this.api.getPlugin(), this);
+    }
+
     /**
      * Self-registering command on constructor call.
      * <p>
