@@ -34,6 +34,17 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>vector-repo</id>
+            <url>https://repo.vectormc.net/artifactory/private</url>
+        </repository>
+        <snapshotRepository>
+            <id>vector-repo</id>
+            <url>https://repo.vectormc.net/artifactory/private</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <repositories>
         <repository>
             <id>Sonatype-public</id>
