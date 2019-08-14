@@ -76,6 +76,14 @@ public class Stream<I> {
         return new Stream<>(buildNew);
     }
 
+    public Stream<I> forEach(Function<I> f) {
+        for (I i : this.collection) {
+            f.accept(i);
+        }
+
+        return this;
+    }
+
     public Collection<I> toCollection() {
         return collection;
     }
