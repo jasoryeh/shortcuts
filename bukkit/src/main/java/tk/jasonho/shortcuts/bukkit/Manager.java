@@ -21,9 +21,13 @@ public abstract class Manager implements Listener {
         this.api = api;
     }
 
-    public abstract void enable();
+    public void enable() {
+        this.api.getLogger().info("Enabled " + this.getClass().getSimpleName() + " manager");
+    }
 
-    public abstract void disable();
+    public void disable() {
+        this.api.getLogger().info("Disabled " + this.getClass().getSimpleName() + " manager");
+    }
 
     /**
      * Given a list of managers to enable, it will try to load all of them

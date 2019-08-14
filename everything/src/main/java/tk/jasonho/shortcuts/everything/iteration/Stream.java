@@ -4,6 +4,7 @@ import tk.jasonho.shortcuts.everything.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import static tk.jasonho.shortcuts.everything.iteration.Comparer.FavorableChoice.LEFT;
 
@@ -86,5 +87,9 @@ public class Stream<I> {
 
     public Collection<I> toCollection() {
         return collection;
+    }
+
+    public List<I> toList() {
+        return new ArrayList<I>(collection);
     }
 }
