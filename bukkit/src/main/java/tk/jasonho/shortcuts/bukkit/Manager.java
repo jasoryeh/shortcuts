@@ -6,6 +6,7 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.event.Listener;
+import tk.jasonho.shortcuts.everything.chat.Colors;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -103,7 +104,11 @@ public abstract class Manager implements Listener {
 
         @Override
         public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-            this.execute(sender, args);
+            if(sender.hasPermission(this.getPermission())) {
+                this.execute(sender, args);
+            } else {
+                sender.sendMessage(Colors.translate(this.getPermissionMessage()));
+            }
             return true;
         }
 
