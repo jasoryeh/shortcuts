@@ -3,11 +3,12 @@ package tk.jasonho.shortcuts.bungee;
 import lombok.Getter;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.plugin.Listener;
+import tk.jasonho.shortcuts.everything.Toggleable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Manager implements Listener {
+public abstract class Manager implements Listener, Toggleable {
 
     @Getter
     protected final BungeeEverythingAPI api;

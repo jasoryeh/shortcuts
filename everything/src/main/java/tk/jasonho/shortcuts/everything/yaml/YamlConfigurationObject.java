@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Experimental little yaml manager.
+ */
 public class YamlConfigurationObject {
     @Getter
     private final Object yaml;

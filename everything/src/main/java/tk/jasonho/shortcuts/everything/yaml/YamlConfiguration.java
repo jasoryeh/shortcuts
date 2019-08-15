@@ -10,7 +10,7 @@ public class YamlConfiguration {
 
     @SneakyThrows
     /**
-     *
+     * Loads a file to our experimental yaml manager.
      * @throws java.io.FileNotFoundException
      */
     public static YamlConfigurationObject load(File f) {

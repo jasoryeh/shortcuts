@@ -79,12 +79,21 @@ public enum ConsoleColors {
     CYAN_BACKGROUND_BRIGHT("\033[0;106m"),      // CYAN
     WHITE_BACKGROUND_BRIGHT("\033[0;107m");     // WHITE
 
+    /**
+     * The actual characters
+     * that create color in the console.
+     */
     private final String code;
 
     ConsoleColors(String code) {
         this.code = code;
     }
 
+    /**
+     * Allows us to not have to keep calling
+     * .toString() on the enums
+     * @return
+     */
     @Override
     public String toString() {
         return code;

@@ -45,5 +45,10 @@ public class DefaultLocalizable extends AbstractLocalizable {
                 .replace("_", "-")
                 .replace("en-UK", "en-GB"));
     }
+
+    @Override
+    public String toString() {
+        return this.resolveDefault();
+    }
 }
 

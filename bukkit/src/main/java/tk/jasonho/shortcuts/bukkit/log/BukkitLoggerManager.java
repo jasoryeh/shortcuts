@@ -9,22 +9,22 @@ public class BukkitLoggerManager extends LoggerManager {
     }
 
     @Override
-    public void info(String m) {
-        Bukkit.getLogger().info(m);
+    public void info(Object... o) {
+        Bukkit.getLogger().info(concat(o));
     }
 
     @Override
-    public void warn(String m) {
-        Bukkit.getLogger().warning(m);
+    public void warn(Object... o) {
+        Bukkit.getLogger().warning(concat(o));
     }
 
     @Override
-    public void error(String m) {
-        Bukkit.getLogger().severe(m);
+    public void error(Object... o) {
+        Bukkit.getLogger().severe(concat(o));
     }
 
     @Override
-    public void debug(String m) {
-        Bukkit.getLogger().fine(m);
+    public void debug(Object... o) {
+        Bukkit.getLogger().fine(concat(o));
     }
 }

@@ -6,6 +6,7 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.event.Listener;
+import tk.jasonho.shortcuts.everything.Toggleable;
 import tk.jasonho.shortcuts.everything.chat.Colors;
 
 import java.lang.reflect.Field;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public abstract class Manager implements Listener {
+public abstract class Manager implements Listener, Toggleable {
 
     @Getter
     protected final BukkitEverythingAPI api;

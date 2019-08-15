@@ -30,4 +30,9 @@ public abstract class AbstractLocalizable {
     private Locale resolveLocale(String locale) {
         return Locale.forLanguageTag(locale.replace("_", "-").replace("en-UK", "en-GB"));
     }
+
+    @Override
+    public String toString() {
+        return this.resolveDefault();
+    }
 }

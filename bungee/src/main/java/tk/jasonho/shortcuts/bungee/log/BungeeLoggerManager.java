@@ -9,22 +9,22 @@ public class BungeeLoggerManager extends LoggerManager {
     }
 
     @Override
-    public void info(String m) {
-        ProxyServer.getInstance().getLogger().info(m);
+    public void info(Object... o) {
+        ProxyServer.getInstance().getLogger().info(concat(o));
     }
 
     @Override
-    public void warn(String m) {
-        ProxyServer.getInstance().getLogger().warning(m);
+    public void warn(Object... o) {
+        ProxyServer.getInstance().getLogger().warning(concat(o));
     }
 
     @Override
-    public void error(String m) {
-        ProxyServer.getInstance().getLogger().severe(m);
+    public void error(Object... o) {
+        ProxyServer.getInstance().getLogger().severe(concat(o));
     }
 
     @Override
-    public void debug(String m) {
-        ProxyServer.getInstance().getLogger().fine(m);
+    public void debug(Object... o) {
+        ProxyServer.getInstance().getLogger().fine(concat(o));
     }
 }

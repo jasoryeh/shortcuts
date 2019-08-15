@@ -1,5 +1,11 @@
 package tk.jasonho.shortcuts.everything.util;
 
+/**
+ * Simple pairing of values
+ *
+ * @param <L> Key/Left
+ * @param <R> Value/Right
+ */
 public class Pair<L, R> {
 
     private final L l;

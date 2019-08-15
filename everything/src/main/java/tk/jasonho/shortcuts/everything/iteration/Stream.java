@@ -8,6 +8,11 @@ import java.util.List;
 
 import static tk.jasonho.shortcuts.everything.iteration.Comparer.FavorableChoice.LEFT;
 
+/**
+ * For fun Stream that I built that I understand or uses
+ * better English than the streams included with java
+ * @param <I>
+ */
 public class Stream<I> {
     private final Collection<I> collection;
 
