@@ -8,6 +8,7 @@ import java.util.List;
 public enum Unit {
     MILLISECOND(1, "millisecond", "milliseconds", "ms"),
     SECOND(MILLISECOND.getDivisor() * 1000, "second", "seconds", "sec", "s"),
+    MINECRAFT_TICK(SECOND.getDivisor() / 20, "mct", "tick", "ticks", "t"),
     MINUTE(SECOND.getDivisor() * 60, "minute", "minutes", "min", "m"),
     HOUR(MINUTE.getDivisor() * 60, "hour", "hours", "h"),
     DAY(HOUR.getDivisor() * 24, "day", "days", "d"),
