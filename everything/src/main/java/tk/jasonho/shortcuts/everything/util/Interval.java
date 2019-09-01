@@ -26,4 +26,8 @@ public class Interval {
     public boolean thisParamBiggerThanOrEqualToSelf(Interval i) {
         return Unit.isGreaterThanEqualTo(i.getUnit(), this.getUnit()) && ( i.getAmount() >= this.getAmount());
     }
+
+    public double inUnit(Unit u) {
+        return this.getInMs() / u.getDivisor();
+    }
 }
