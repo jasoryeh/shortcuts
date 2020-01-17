@@ -61,6 +61,12 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.0</version>
             </dependency>
+            <!-- MySql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.18</version>
+            </dependency>
             <!--Spigot API v1.8-->
             <dependency>
                 <groupId>org.spigotmc</groupId>
