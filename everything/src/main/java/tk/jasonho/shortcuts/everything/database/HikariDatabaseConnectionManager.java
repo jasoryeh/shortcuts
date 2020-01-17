@@ -22,8 +22,8 @@ public class HikariDatabaseConnectionManager implements DatabaseConnectionManage
         DatabaseConfiguration configuration = this.parent.getConfiguration();
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl("jdbc:mysql://" + configuration.getHost() + ":" + configuration.getPort() + "/" + configuration.getDatabases().get(0));
-        config.setUsername(config.getUsername());
-        config.setPassword(config.getPassword());
+        config.setUsername(configuration.getUsername());
+        config.setPassword(configuration.getPassword());
 
         this.hikariDataSource = new HikariDataSource(config);
     }
